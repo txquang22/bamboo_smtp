@@ -1,7 +1,7 @@
 defmodule BambooSmtp.Mixfile do
   use Mix.Project
 
-  @project_url "https://github.com/fewlinesco/bamboo_smtp"
+  @project_url "https://github.com/txquang22/bamboo_smtp"
 
   def project do
     [app: :bamboo_smtp,
@@ -25,7 +25,7 @@ defmodule BambooSmtp.Mixfile do
 
   defp deps do
     [
-      {:bamboo, "~> 1.0.0-rc"},
+      {:bamboo, git: "https://github.com/thoughtbot/bamboo.git", override: true},
       {:credo, "~> 0.8.2", only: [:dev, :test]},
       {:earmark, ">= 1.0.3", only: :dev},
       {:ex_doc, "~> 0.16.2", only: :dev},
